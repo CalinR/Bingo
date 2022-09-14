@@ -1,0 +1,22 @@
+.bingo__number {
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.bingo__number__circle {
+    width: 100%;
+    aspect-ratio : 1 / 1;
+    background: #ccc;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bingo__number__circle--selected {
+    background: #666;
+    color: #fff;
+}

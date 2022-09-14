@@ -1,0 +1,4 @@
+.bingo__board {
+    flex: 1;
+    display: flex;
+}

@@ -1,0 +1,16 @@
+.bingo__row {
+    width: 20%;
+    text-align: center;
+    border-left: 1px solid #ccc;
+}
+
+.bingo__header {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.bingo_numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
