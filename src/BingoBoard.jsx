@@ -1,14 +1,14 @@
 import './BingoBoard.css';
 import BingoRow from "./BingoRow";
 
-function BingoBoard({ onBallSelected }) {
+function BingoBoard({ dispatch, selectedBalls }) {
     return (
         <section className="bingo__board">
-            <BingoRow rowName="B" rowNumber={0} onBallSelected={onBallSelected}/>
-            <BingoRow rowName="I" rowNumber={1} onBallSelected={onBallSelected}/>
-            <BingoRow rowName="N" rowNumber={2} onBallSelected={onBallSelected}/>
-            <BingoRow rowName="G" rowNumber={3} onBallSelected={onBallSelected}/>
-            <BingoRow rowName="O" rowNumber={4} onBallSelected={onBallSelected}/>
+            <BingoRow rowNumber={0} dispatch={dispatch} selectedBalls={selectedBalls}/>
+            <BingoRow rowNumber={1} dispatch={dispatch} selectedBalls={selectedBalls}/>
+            <BingoRow rowNumber={2} dispatch={dispatch} selectedBalls={selectedBalls}/>
+            <BingoRow rowNumber={3} dispatch={dispatch} selectedBalls={selectedBalls}/>
+            <BingoRow rowNumber={4} dispatch={dispatch} selectedBalls={selectedBalls}/>
         </section>
     );
 }

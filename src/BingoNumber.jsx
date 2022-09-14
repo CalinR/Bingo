@@ -1,17 +1,22 @@
 import './BingoNumber.css';
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 
-function BingoNumber({ rowName, number, onBallSelected }) {
-    const [selected, setSelected] = useState(false);
+function BingoNumber({ number, dispatch, selectedBalls }) {
+    const selected = selectedBalls.indexOf(number) > -1;
 
     const handleClick = useCallback(() => {
-        setSelected((prevState) => !prevState);
-        if (!selected) {
-            onBallSelected(`${rowName}:${number}`);
+        if (selected) {
+            dispatch({
+                type: 'REMOVE_NUMBER',
+                payload: number,
+            });
         } else {
-            onBallSelected(null);
+            dispatch({
+                type: 'ADD_NUMBER',
+                payload: number,
+            });
         }
-    }, [selected, rowName, number]);
+    }, [selected, dispatch]);
 
     return (
         <li className="bingo__number">

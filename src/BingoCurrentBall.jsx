@@ -2,13 +2,14 @@ import './BingoCurrentBall.css';
 
 function BingoCurrentBall({ currentBall }) {
     if (currentBall !== null) {
-        const ballRow = currentBall.split(':')[0];
-        const ballNumber = currentBall.split(':')[1];
+        const rows = ['B', 'I', 'N', 'G', 'O'];
+        const rowNumber = Math.floor((currentBall - 1) / 15);
+        const ballRow = rows[rowNumber];
 
         return (
             <div className="bingo__current_ball">
                 <div className="current_ball__row">{ballRow}</div>
-                <div className="current_ball__number">{ballNumber}</div>
+                <div className="current_ball__number">{currentBall}</div>
             </div>
         );
     } else {
