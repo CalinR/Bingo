@@ -1,0 +1,20 @@
+.bingo__theme__square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.bingo__theme__square--selected {
+    background: red;
+}
+
+.theme__display__header .bingo__theme__square {
+    background: #ccc;
+}

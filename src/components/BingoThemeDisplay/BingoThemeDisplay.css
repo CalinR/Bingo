@@ -1,0 +1,9 @@
+.bingo__theme__display {
+    margin: 40px 0;
+    box-shadow: 0 0 0 1px #333;
+}
+
+.theme__display__squares, .theme__display__header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

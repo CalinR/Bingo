@@ -1,5 +1,5 @@
 import './BingoBoard.css';
-import BingoRow from "./BingoRow";
+import BingoRow from "../BingoRow/BingoRow";
 
 function BingoBoard({ dispatch, selectedBalls }) {
     return (

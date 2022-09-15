@@ -1,5 +1,5 @@
 import './BingoRow.css';
-import BingoNumber from "./BingoNumber";
+import BingoNumber from "../BingoNumber/BingoNumber";
 
 function BingoRow({rowNumber, dispatch, selectedBalls }) {
     const rows = ['B', 'I', 'N', 'G', 'O']
