@@ -13,7 +13,9 @@ function BingoCurrentBall({ currentBall }) {
             </div>
         );
     } else {
-        return null;
+        return (
+            <div className="bingo__current_ball bingo__current_ball--disabled"></div>
+        );
     }
 }
 

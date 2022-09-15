@@ -9,6 +9,11 @@
     align-items: center;
     flex-direction: column;
     font-weight: bold;
+    margin-top: 40px;
+}
+
+.bingo__current_ball--disabled {
+    background: #ccc;
 }
 
 .current_ball__row {

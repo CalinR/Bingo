@@ -8,12 +8,11 @@ const initialState = {
   currentBall: null,
   selectedBalls: [],
   theme: new Array(25).fill(false),
+  themeName: 'No Pattern',
 }
 
 function App() {
   const [gameState, dispatch] = useReducerWithLocalStorage(reducer, initialState);
-
-  console.log(gameState);
 
   return (
     <div className="app">
@@ -22,6 +21,7 @@ function App() {
           dispatch={dispatch}
           currentBall={gameState.currentBall}
           theme={gameState.theme}
+          themeName={gameState.themeName}
         />
         <BingoBoard
           dispatch={dispatch}

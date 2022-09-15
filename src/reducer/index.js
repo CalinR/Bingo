@@ -16,17 +16,20 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 theme: state.theme.map((item, index) => index === action.payload ? !item : item),
+                themeName: '',
             }
         case 'CHANGE_THEME':
             return {
                 ...state,
-                theme: action.payload,
+                theme: action.payload.pattern,
+                themeName: action.payload.label,
             }
         case 'CLEAR':
             return {
                 currentBall: null,
                 selectedBalls: [],
                 theme: new Array(25).fill(false),
+                themeName: 'No Pattern',
             }
         default:
             return state;

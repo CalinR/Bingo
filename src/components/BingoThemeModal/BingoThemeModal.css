@@ -13,7 +13,7 @@
     display: flex;
 }
 
-.theme__modal__container .bingo__theme__display {
+.theme__modal__container .bingo__theme__display__wrapper {
     width: 20%;
 }
 
@@ -24,6 +24,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    grid-template-rows: repeat(5, 0fr);
 }
 
 .theme__modal__patterns p {
