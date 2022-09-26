@@ -8,7 +8,7 @@ function BingoRow({rowNumber, dispatch, selectedBalls }) {
     const numberElements = Array.from(Array(15)).map((value, index) => <BingoNumber key={index} number={index + startingOffset} dispatch={dispatch} selectedBalls={selectedBalls}/>)
 
     return (
-        <div className="bingo__row">
+        <div className={`bingo__row bingo__row__${rowNumber}`}>
             <div className="bingo__header">{rowName}</div>
             <ul className="bingo_numbers">
                 {numberElements}

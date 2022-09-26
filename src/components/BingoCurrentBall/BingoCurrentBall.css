@@ -17,9 +17,10 @@
 }
 
 .current_ball__row {
-    font-size: 100px
+    font-size: 50px;
+    font-weight: normal;
 }
 
 .current_ball__number {
-    font-size: 150px;
+    font-size: 70px;
 }

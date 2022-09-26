@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -56,6 +58,21 @@ html, body, #root {
   height: 100%;
 }
 
+.app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+  background: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .bingo {
   display: flex;
+  width: 1280px;
+  height: 720px;
+  flex-shrink: 0;
+  background: #fff;
 }

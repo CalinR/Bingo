@@ -3,6 +3,7 @@ import BingoBoard from '../BingoBoard/BingoBoard';
 import BingoSidebar from '../BingoSidebar/BingoSidebar';
 import useReducerWithLocalStorage from '../../hooks/useReducerWithLocalStorage';
 import reducer from '../../reducer';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const initialState = {
   currentBall: null,
@@ -13,10 +14,42 @@ const initialState = {
 
 function App() {
   const [gameState, dispatch] = useReducerWithLocalStorage(reducer, initialState);
+  const [scale, setScale] = useState(1);
+  const bingoRef = useRef();
+
+  const onResize = useCallback(() => {
+    const fixedWidth = 1280;
+    const fixedHeight = 720;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const bingoWidth = bingoRef.current.offsetWidth;
+    const bingoHeight = bingoRef.current.offsetHeight;
+    const bingoAspectRatio = bingoHeight / bingoWidth;
+    const windowAspectRatio = windowHeight / windowWidth; 
+
+    if (windowAspectRatio < bingoAspectRatio) {
+      setScale(windowHeight / fixedHeight);
+    } else {
+      setScale(windowWidth / fixedWidth);
+    }
+  }, [bingoRef.current]);
+
+  useEffect(() => {
+    onResize();
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    }
+  }, [bingoRef.current]);
+
+  const styles = {
+    'transform': `scale(${scale})`,
+  }
 
   return (
     <div className="app">
-      <div className="bingo">
+      <div className="bingo" ref={bingoRef} style={styles}>
         <BingoSidebar
           dispatch={dispatch}
           currentBall={gameState.currentBall}
