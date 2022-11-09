@@ -8,7 +8,7 @@ const patterns = [
         pattern: [true, false, true, false, true, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, true, false, true, false, true],
     },
     {
-        label: 'Diagonal Line',
+        label: `Diagonal Line (No N's)`,
         pattern: [true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true],
     },
     {
@@ -32,16 +32,16 @@ const patterns = [
         pattern: [true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, true, true, true, true],
     },
     {
-        label: 'Postage Stamp',
-        pattern: [false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        label: 'Two Postage Stamps',
+        pattern: [false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, true, true, false, false, false, true, true, false, false, false],
     },
     {
-        label: 'H Any Direction',
-        pattern: [true, false, false, false, true, true, false, false, false, true, true, true, true, true, true, true, false, false, false, true, true, false, false, false, true],
+        label: 'Letter N',
+        pattern: [true, false, false, false, true, true, true, false, false, true, true, false, true, false, true, true, false, false, true, true, true, false, false, false, true],
     },
     {
-        label: 'Empty House',
-        pattern: [false, false, false, false, false, false, true, true, true, false, false, true, false, true, false, false, true, true, true, false, false, false, false, false, false],
+        label: 'Number 7',
+        pattern: [true, true, true, true, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false],
     },
     {
         label: 'Blackout',
