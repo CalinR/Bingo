@@ -7,12 +7,21 @@
     aspect-ratio: 1/1;
     width: 100%;
     background: #fff;
-    border: 1px solid #333;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
     cursor: pointer;
 }
 
+.bingo__theme__square:last-child, .bingo__theme__square:nth-child(5n) {
+    border-right: none;
+}
+
+.bingo__theme__square:nth-child(21), .bingo__theme__square:nth-child(22), .bingo__theme__square:nth-child(23), .bingo__theme__square:nth-child(24), .bingo__theme__square:nth-child(25) {
+    border-bottom: none;
+}
+
 .bingo__theme__square--selected {
-    background: red;
+    background: #000;
 }
 
 .theme__display__header .bingo__theme__square {

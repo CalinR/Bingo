@@ -1,4 +1,9 @@
 .bingo__sidebar {
-    width: 20%;
-    padding: 40px;
+    width: 30%;
+    padding: 10px 60px;
+}
+
+.bingo__sidebar button {
+    width: 100%;
+    background: #eee;
 }

@@ -1,6 +1,9 @@
 .bingo__theme__display {
-    margin: 20px 0 40px;
-    box-shadow: 0 0 0 1px #333;
+    margin: 20px 20px 0 20px;
+    /* box-shadow: 0 0 0 2px inset #000; */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #000;
 }
 
 .theme__display__squares, .theme__display__header {
@@ -12,8 +15,7 @@
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
-    font-size: 40px;
-    min-height: 80px;
+    font-size:30px;
     display: flex;
     justify-content:center;
     align-items: flex-end;

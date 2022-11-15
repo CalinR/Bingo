@@ -1,12 +1,13 @@
 .bingo__row {
     width: 20%;
     text-align: center;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #000;
+    padding: 0 10px;
 }
 
 .bingo__header {
     font-size: 90px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .bingo_numbers {
