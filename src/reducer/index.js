@@ -30,6 +30,12 @@ const reducer = (state, action) => {
                 selectedBalls: [],
                 theme: new Array(25).fill(false),
                 themeName: 'No Pattern',
+                showCountdown: false,
+            }
+        case 'SHOW_COUNTDOWN':
+            return {
+                ...state,
+                showCountdown: action.payload,
             }
         default:
             return state;

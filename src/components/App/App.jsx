@@ -10,6 +10,7 @@ const initialState = {
   selectedBalls: [],
   theme: new Array(25).fill(false),
   themeName: 'No Pattern',
+  showCountdown: false,
 }
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
   useEffect(() => {
     onResize();
     window.addEventListener('resize', onResize);
+    window.onbeforeunload = (e) => {
+      return 'Do you want to exit this page?';
+    };
 
     return () => {
       window.removeEventListener('resize', onResize);
@@ -55,6 +59,8 @@ function App() {
           currentBall={gameState.currentBall}
           theme={gameState.theme}
           themeName={gameState.themeName}
+          showCountdown={gameState.showCountdown}
+          selectedBalls={gameState.selectedBalls}
         />
         <BingoBoard
           dispatch={dispatch}

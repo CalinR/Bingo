@@ -24,8 +24,8 @@ const patterns = [
         pattern: [false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false],
     },
     {
-        label: '7. 1 Line Any Direction',
-        pattern: [false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false],
+        label: '7. 1 Outside Line',
+        pattern: [true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false],
     },
     {
         label: '8. L Any Direction',
