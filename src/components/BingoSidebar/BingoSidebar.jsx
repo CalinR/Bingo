@@ -19,7 +19,7 @@ function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, 
             </button>
             <BingoTheme dispatch={dispatch} theme={theme} themeName={themeName} showCountdown={showCountdown} />
             <BingoBallCount ballCount={selectedBalls.length} showCountdown={showCountdown} />
-            <BingoCurrentBall currentBall={currentBall}/>
+            <BingoCurrentBall currentBall={currentBall} dispatch={dispatch} selectedBalls={selectedBalls} />
         </section>
     );
 }
