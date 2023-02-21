@@ -3,7 +3,7 @@ import { useState } from 'react';
 import BingoThemeModal from '../BingoThemeModal/BingoThemeModal';
 import BingoThemeDisplay from '../BingoThemeDisplay/BingoThemeDisplay';
 
-function BingoTheme({ dispatch, theme, themeName, showCountdown }) {
+function BingoTheme({ dispatch, theme, themeName, showCountdown, displayOddEven }) {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -19,6 +19,7 @@ function BingoTheme({ dispatch, theme, themeName, showCountdown }) {
                 themeName={themeName}
                 show={showModal}
                 showCountdown={showCountdown}
+                displayOddEven={displayOddEven}
                 onClose={() => setShowModal(false)}
             />
         </div>

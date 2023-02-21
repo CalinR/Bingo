@@ -5,7 +5,7 @@ import BingoTheme from '../BingoTheme/BingoTheme';
 import ResetIcon from '../Icons/ResetIcon';
 import './BingoSidebar.css';
 
-function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, selectedBalls }) {
+function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, displayOddEven, selectedBalls }) {
     const handleClear = useCallback(() => {
         if (window.confirm('Are you sure you want to clear the board?')) {
             dispatch({ type: 'CLEAR' });
@@ -17,7 +17,7 @@ function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, 
             <button onClick={handleClear} className="new_game">
                 <ResetIcon />
             </button>
-            <BingoTheme dispatch={dispatch} theme={theme} themeName={themeName} showCountdown={showCountdown} />
+            <BingoTheme dispatch={dispatch} theme={theme} themeName={themeName} showCountdown={showCountdown} displayOddEven={displayOddEven}/>
             <BingoBallCount ballCount={selectedBalls.length} showCountdown={showCountdown} />
             <BingoCurrentBall currentBall={currentBall} dispatch={dispatch} selectedBalls={selectedBalls} />
         </section>

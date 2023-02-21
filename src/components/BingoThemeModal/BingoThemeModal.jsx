@@ -4,10 +4,12 @@ import BingoThemeDisplay from '../BingoThemeDisplay/BingoThemeDisplay';
 import CloseIcon from '../Icons/CloseIcon';
 import './BingoThemeModal.css';
 
-function BingoThemeModal({ dispatch, theme, themeName, showCountdown, show, onClose }) {
+function BingoThemeModal({ dispatch, theme, themeName, showCountdown, displayOddEven, show, onClose }) {
     if (!show) return null;
 
     const patternList = patterns.map((pattern) => <p key={pattern.label} onClick={() => dispatch({ type: 'CHANGE_THEME', payload: { pattern: pattern.pattern, label: pattern.label } })}>{pattern.label}</p>)
+
+    console.log(displayOddEven);
 
     return (
         <div className="bingo__theme__modal">
@@ -24,10 +26,14 @@ function BingoThemeModal({ dispatch, theme, themeName, showCountdown, show, onCl
                         key="theme-display-modal"
                     />
                     <div className="theme__modal__countdown">
-                        <label>Countdown</label>
                         <button onClick={() => dispatch({ type: 'SHOW_COUNTDOWN', payload: !showCountdown })}>
                             {
-                                showCountdown ? 'Hide' : 'Show'
+                                showCountdown ? 'Hide Countdown' : 'Show Countdown'
+                            }
+                        </button>
+                        <button onClick={() => dispatch({ type: 'TOGGLE_ODD_EVEN', payload: displayOddEven === 'odd' ? 'even' : (displayOddEven === 'even' ? null : 'odd') })}>
+                            {
+                                displayOddEven === 'odd' ? 'Showing Odd' : (displayOddEven === 'even' ? 'Showing Even' : 'Showing Neither Odd/Even')
                             }
                         </button>
                     </div>

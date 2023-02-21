@@ -11,6 +11,7 @@ const initialState = {
   theme: new Array(25).fill(false),
   themeName: 'No Pattern',
   showCountdown: false,
+  displayOddEven: null,
 }
 
 function App() {
@@ -60,11 +61,13 @@ function App() {
           theme={gameState.theme}
           themeName={gameState.themeName}
           showCountdown={gameState.showCountdown}
+          displayOddEven={gameState.displayOddEven}
           selectedBalls={gameState.selectedBalls}
         />
         <BingoBoard
           dispatch={dispatch}
           selectedBalls={gameState.selectedBalls}
+          displayOddEven={gameState.displayOddEven}
         />
       </div>
     </div>

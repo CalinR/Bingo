@@ -8,9 +8,13 @@ const patterns = [
         pattern: [true, false, true, false, true, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, true, false, true, false, true],
     },
     {
-        label: `3. Diagonal Line`,
-        pattern: [true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true],
+        label: '3. V any Direction',
+        pattern: [true, false, false, false, true, false, true, false, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false],
     },
+    // {
+    //     label: `3. Diagonal Line`,
+    //     pattern: [true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true],
+    // },
     {
         label: '4. Letter X',
         pattern: [true, false, false, false, true, false, true, false, true, false, false, false, true, false, false, false, true, false, true, false, true, false, false, false, true],
@@ -36,13 +40,21 @@ const patterns = [
         pattern: [false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, true, true, false, false, false, true, true, false, false, false],
     },
     {
-        label: '10. Letter N',
-        pattern: [true, false, false, false, true, true, true, false, false, true, true, false, true, false, true, true, false, false, true, true, true, false, false, false, true],
+        label: '10. Any 7 Numbers',
+        pattern: [true, false, false, true, false, false, false, false, false, true, false, true, false, false, false, false, false, false, true, false, true, false, true, false, false],
     },
     {
-        label: '11. Number 7',
-        pattern: [true, true, true, true, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false],
+        label: '11. 6 Pack',
+        pattern: [true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
     },
+    // {
+    //     label: '10. Letter N',
+    //     pattern: [true, false, false, false, true, true, true, false, false, true, true, false, true, false, true, true, false, false, true, true, true, false, false, false, true],
+    // },
+    // {
+    //     label: '11. Number 7',
+    //     pattern: [true, true, true, true, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false],
+    // },
     {
         label: '12. Blackout',
         pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],

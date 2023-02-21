@@ -1,7 +1,6 @@
 import './BingoBallCount.css';
 
 function BingoBallCount({ ballCount, showCountdown }) {
-    console.log({ showCountdown, ballCount });
     if (!showCountdown) return null;
 
     return (

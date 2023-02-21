@@ -9,8 +9,6 @@ export default function PlayerCardColumn({ column, dispatch, selectedBalls, card
         }
     }, [selectedBalls]);
 
-    console.log({ cardNumbers });
-
     const rows = cardNumbers?.map((number, index) => {
         const selected = selectedBalls.indexOf(number) > -1;
 

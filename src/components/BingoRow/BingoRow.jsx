@@ -1,11 +1,11 @@
 import './BingoRow.css';
 import BingoNumber from "../BingoNumber/BingoNumber";
 
-function BingoRow({rowNumber, dispatch, selectedBalls }) {
+function BingoRow({rowNumber, dispatch, selectedBalls, displayOddEven }) {
     const rows = ['B', 'I', 'N', 'G', 'O']
     const startingOffset = (15 * rowNumber) + 1;
     const rowName = rows[rowNumber];
-    const numberElements = Array.from(Array(15)).map((value, index) => <BingoNumber key={index} number={index + startingOffset} dispatch={dispatch} selectedBalls={selectedBalls}/>)
+    const numberElements = Array.from(Array(15)).map((value, index) => <BingoNumber key={index} number={index + startingOffset} dispatch={dispatch} selectedBalls={selectedBalls} displayOddEven={displayOddEven}/>)
 
     return (
         <div className={`bingo__row bingo__row__${rowNumber}`}>
