@@ -1,16 +1,15 @@
 .bingo__current_ball {
     cursor: pointer;
-    width: 100%;
+    width: auto;
     aspect-ratio: 4/3;
     background: #000;
-    border-radius: 8px;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-weight: bold;
-    margin-top: 20px;
+    height: 100%;
 }
 
 .bingo__current_ball--disabled {
@@ -25,4 +24,13 @@
 .current_ball__number {
     font-size: 110px;
     font-weight: 800;
+}
+
+.bingo__current_ball_container {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }

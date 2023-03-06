@@ -38,8 +38,6 @@ const reducer = (state, action) => {
                 showCountdown: action.payload,
             }
         case 'TOGGLE_ODD_EVEN':
-            console.log(action);
-
             return {
                 ...state,
                 displayOddEven: action.payload,

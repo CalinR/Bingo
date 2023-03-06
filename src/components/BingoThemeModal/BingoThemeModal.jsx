@@ -9,8 +9,6 @@ function BingoThemeModal({ dispatch, theme, themeName, showCountdown, displayOdd
 
     const patternList = patterns.map((pattern) => <p key={pattern.label} onClick={() => dispatch({ type: 'CHANGE_THEME', payload: { pattern: pattern.pattern, label: pattern.label } })}>{pattern.label}</p>)
 
-    console.log(displayOddEven);
-
     return (
         <div className="bingo__theme__modal">
             <h1>Winning Patten</h1>

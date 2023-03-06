@@ -59,6 +59,14 @@ const patterns = [
         label: '12. Blackout',
         pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
     },
+    {
+        label: 'Special: Odd/Even',
+        pattern: [false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false],
+    },
+    {
+        label: 'Special: Lucky Star',
+        pattern: [false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false],
+    }
 
     /*
     {

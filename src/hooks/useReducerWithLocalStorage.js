@@ -4,8 +4,7 @@ const useReducerWithLocalStorage = (reducer, initialState, localStorageKey = 'BI
     let localStorageState = window.localStorage.getItem(localStorageKey);
     // initialState structure has changed and does not match what is stored in localStorage
 
-    console.log(Object.keys(JSON.parse(localStorageState)), Object.keys(initialState));
-    if (Object.keys(JSON.parse(localStorageState)) !== Object.keys(initialState)) {
+    if (localStorageState && Object.keys(JSON.parse(localStorageState)).toString() !== Object.keys(initialState).toString()) {
         localStorageState = null;
     }
 

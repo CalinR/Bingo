@@ -52,6 +52,8 @@ function App() {
     'transform': `scale(${scale})`,
   }
 
+  console.log(gameState.selectedBalls);
+
   return (
     <div className="app">
       <div className="bingo" ref={bingoRef} style={styles}>

@@ -16,7 +16,9 @@ function BingoCurrentBall({ currentBall, dispatch, selectedBalls }) {
     }, [videoRef.current]);
 
     return (
-        <video className="bingo__current_ball" autoPlay ref={videoRef}></video>
+        <div className="bingo__current_ball_container">
+            <video className="bingo__current_ball" autoPlay ref={videoRef}></video>
+        </div>
     );
     // const allNumbers = [...Array(76).keys()].slice(1);
 

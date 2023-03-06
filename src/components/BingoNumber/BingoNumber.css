@@ -23,3 +23,7 @@
     opacity: 1;
     background: #000;
 }
+
+.bingo__number__circle--last-selected {
+    background: red;
+}
