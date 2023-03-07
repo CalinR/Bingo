@@ -61,7 +61,7 @@ const patterns = [
     },
     {
         label: 'Special: Odd/Even',
-        pattern: [false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false],
+        pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
     },
     {
         label: 'Special: Lucky Star',
