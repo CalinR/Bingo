@@ -33,4 +33,15 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.bingo__next_ball_text { 
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 0 0 5px #000;
+    bottom: 10px;
+    text-transform: uppercase;
 }
