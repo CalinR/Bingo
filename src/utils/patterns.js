@@ -20,33 +20,46 @@ const patterns = [
         pattern: [true, false, false, false, true, false, true, false, true, false, false, false, true, false, false, false, true, false, true, false, true, false, false, false, true],
     },
     {
-        label: '5. T any Direction',
-        pattern: [false, false, false, false, true, false, false, false, false, true, true, true, true, true, true, false, false, false, false, true, false, false, false, false, true],
+        label: 'Special: Lucky Star',
+        pattern: [false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false],
+    },
+    {
+        label: '5. Small Kite Any Direction',
+        pattern: [true, true, false, false, false, true, true, false, false, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, true],
     },
     {
         label: '6. 2 Lines Any Direction',
-        pattern: [false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false],
+        pattern: [true, false, false, false, false, true, true, false, false, false, true, false, true, false, false, true, false, false, true, false, true, false, false, false, true],
+    },
+    {
+        label: 'Special: Odd/Even',
+        pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
     },
     {
         label: '7. 1 Outside Line',
         pattern: [true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false],
     },
     {
-        label: '8. L Any Direction',
-        pattern: [true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, true, true, true, true],
-    },
-    {
-        label: '9. Two Postage Stamps',
+        label: '8. Two Postage Stamps',
         pattern: [false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, true, true, false, false, false, true, true, false, false, false],
     },
     {
-        label: '10. Any 7 Numbers',
-        pattern: [true, false, false, true, false, false, false, false, false, true, false, true, false, false, false, false, false, false, true, false, true, false, true, false, false],
+        label: '9. 1 Line No Free Space',
+        pattern: [false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false, false, true, false, false, false],
     },
     {
-        label: '11. 6 Pack',
+        label: 'Special: Bonanza',
+        pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+    },
+    {
+        label: '10. 6 Pack',
         pattern: [true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false],
     },
+    {
+        label: '11. Wee House',
+        pattern: [false, false, false, false, false, false, true, true, true, false, false, true, false, true, false, false, true, true, true, false, false, false, false, false, false],
+    },
+    
     // {
     //     label: '10. Letter N',
     //     pattern: [true, false, false, false, true, true, true, false, false, true, true, false, true, false, true, true, false, false, true, true, true, false, false, false, true],
@@ -56,17 +69,13 @@ const patterns = [
     //     pattern: [true, true, true, true, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false],
     // },
     {
-        label: '12. Blackout',
-        pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        label: '12. Empty House',
+        pattern: [true, true, true, true, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, true, true, true, true],
     },
     {
-        label: 'Special: Odd/Even',
+        label: '13. Blackout',
         pattern: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
     },
-    {
-        label: 'Special: Lucky Star',
-        pattern: [false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false, false, true, true, false, false],
-    }
 
     /*
     {
