@@ -43,6 +43,7 @@ function App() {
       return 'Do you want to exit this page?';
     };
 
+
     return () => {
       window.removeEventListener('resize', onResize);
     }

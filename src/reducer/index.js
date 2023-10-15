@@ -18,20 +18,35 @@ const reducer = (state, action) => {
                 theme: state.theme.map((item, index) => index === action.payload ? !item : item),
                 themeName: '',
             }
-        case 'CHANGE_THEME':
+        case 'CHANGE_THEME': {
+            let newSelectedBalls = state.selectedBalls;
+
+            if (action.payload.label === 'Special: Bonanza') {
+                newSelectedBalls = JSON.parse(localStorage.getItem('BINGO_BONANZA_STATE')).selectedBalls;
+            }
+
             return {
                 ...state,
+                selectedBalls: newSelectedBalls,
                 theme: action.payload.pattern,
                 themeName: action.payload.label,
             }
-        case 'CLEAR':
+        }
+        case 'CLEAR': {
+            let newSelectedBalls = [];
+
+            if (state.themeName === 'Special: Bonanza') {
+                newSelectedBalls = JSON.parse(localStorage.getItem('BINGO_BONANZA_STATE')).selectedBalls;
+            }
+
             return {
                 currentBall: null,
-                selectedBalls: [],
-                theme: new Array(25).fill(false),
-                themeName: 'No Pattern',
+                selectedBalls: newSelectedBalls,
+                theme: state.theme,
+                themeName: state.themeName,
                 showCountdown: false,
             }
+        }
         case 'SHOW_COUNTDOWN':
             return {
                 ...state,

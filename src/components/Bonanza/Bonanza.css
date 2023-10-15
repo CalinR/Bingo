@@ -1,19 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
 
-#root {
+
+html, body, #root {
     width: 100%;
+    height: 100%;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+
+.bingo {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    height: 720px;
+    flex-shrink: 0;
+    background: #fff;
 }
 
 .bonanza__board {
     display: flex;
     flex-direction: column;
-    grid-gap: 40px;
+    grid-gap: 20px;
 }
 
 .bonanza__heading {
     font-family: "Oleo Script", sans-serif;
     text-align: center;
-    font-size: 150px;
+    font-size: 100px;
     text-transform: uppercase;
     margin: 40px 0 40px;
 }
@@ -24,4 +47,20 @@ body {
     place-items: flex-start!important;
     min-width: 320px;
     min-height: 100vh;
+}
+
+.bonanza__ball-count {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    color: #95a5a6;
+}
+
+.bonanza__clear {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    color: #95a5a6;
 }
