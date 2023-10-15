@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+
+#root {
+    width: 100%;
+}
+
+.bonanza__board {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+}
+
+.bonanza__heading {
+    font-family: "Oleo Script", sans-serif;
+    text-align: center;
+    font-size: 150px;
+    text-transform: uppercase;
+    margin: 40px 0 40px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: flex-start!important;
+    min-width: 320px;
+    min-height: 100vh;
+}

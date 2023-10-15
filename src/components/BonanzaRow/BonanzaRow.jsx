@@ -1,4 +1,5 @@
 import BingoNumber from "../BingoNumber/BingoNumber";
+import './BonanzaRow.css';
 
 function BonanzaRow({rowNumber, dispatch, selectedBalls, displayOddEven }) {
     const rows = ['B', 'I', 'N', 'G', 'O']
@@ -7,9 +8,9 @@ function BonanzaRow({rowNumber, dispatch, selectedBalls, displayOddEven }) {
     const numberElements = Array.from(Array(15)).map((value, index) => <BingoNumber key={index} number={index + startingOffset} dispatch={dispatch} selectedBalls={selectedBalls} displayOddEven={displayOddEven}/>)
 
     return (
-        <div className={`bingo__row bingo__row__${rowNumber}`}>
-            <div className="bingo__header">{rowName}</div>
-            <ul className="bingo_numbers">
+        <div className={`bonanza__row bonanza__row__${rowNumber}`}>
+            <div className="bonanza__header">{rowName}</div>
+            <ul className="bonanza_numbers">
                 {numberElements}
             </ul>
         </div>

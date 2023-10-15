@@ -14,8 +14,10 @@ const changeAssetPathPlugin = (rootFolder) => {
     generateBundle(options, bundle) {
       const indexHtml = bundle['index.html'];
       const playerHtml = bundle['player/index.html'];
+      const bonanzaHtml = bundle['bonanza/index.html'];
       indexHtml.source = indexHtml.source.replace(/href=\"\/assets\//g, 'href="/' + rootFolder + '/assets/').replace(/src=\"\/assets\//g, 'src="/' + rootFolder + '/assets/');
       playerHtml.source = playerHtml.source.replace(/href=\"\/assets\//g, 'href="/' + rootFolder + '/assets/').replace(/src=\"\/assets\//g, 'src="/' + rootFolder + '/assets/');
+      bonanzaHtml.source = bonanzaHtml.source.replace(/href=\"\/assets\//g, 'href="/' + rootFolder + '/assets/').replace(/src=\"\/assets\//g, 'src="/' + rootFolder + '/assets/');
     }
   }
 }
@@ -34,6 +36,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         player: resolve(root, 'player', 'index.html'),
+        bonanza: resolve(root, 'bonanza', 'index.html'),
       },
     },
   },
