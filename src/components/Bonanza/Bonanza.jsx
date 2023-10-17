@@ -52,7 +52,7 @@ function Bonanza() {
     'transform': `scale(${scale})`,
   }
 
-  const count = gameState.selectedBalls.length;
+  const count = gameState.selectedBalls.length-1;
 
   return (
     <div className="app">
