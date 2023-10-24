@@ -12,7 +12,7 @@ const bonanzaReducer = (state, action) => {
             }
         case 'CLEAR':
             return {
-                selectedBalls: [0],
+                selectedBalls: [],
             }
         default:
             return state;

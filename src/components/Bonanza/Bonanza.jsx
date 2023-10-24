@@ -5,7 +5,7 @@ import BonanzaRow from "../BonanzaRow/BonanzaRow";
 import './Bonanza.css';
 
 const initialState = {
-  selectedBalls: [0],
+  selectedBalls: [],
 }
 
 function Bonanza() {
@@ -52,7 +52,7 @@ function Bonanza() {
     'transform': `scale(${scale})`,
   }
 
-  const count = gameState.selectedBalls.length-1;
+  const count = gameState.selectedBalls.length;
 
   return (
     <div className="app">
