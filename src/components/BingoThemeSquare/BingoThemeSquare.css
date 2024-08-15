@@ -21,7 +21,17 @@
 }
 
 .bingo__theme__square--selected {
+    position: relative;
+}
+
+.bingo__theme__square--selected:after {
+    content: "";
+    width: 40px;
+    height: 40px;
     background: #000;
+    position: absolute;
+    display: block;
+    border-radius: 100%;
 }
 
 .theme__display__header .bingo__theme__square {
