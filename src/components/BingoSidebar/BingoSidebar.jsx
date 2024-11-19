@@ -4,6 +4,7 @@ import BingoCurrentBall from '../BingoCurrentBall/BingoCurrentBall';
 import BingoTheme from '../BingoTheme/BingoTheme';
 import ResetIcon from '../Icons/ResetIcon';
 import './BingoSidebar.css';
+import BingoLastBall from '../BingoLastBall/BingoLastBall';
 
 function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, displayOddEven, selectedBalls }) {
     const handleClear = useCallback(() => {
@@ -19,7 +20,7 @@ function BingoSidebar({ dispatch, currentBall, theme, themeName, showCountdown, 
             </button>
             <BingoTheme dispatch={dispatch} theme={theme} themeName={themeName} showCountdown={showCountdown} displayOddEven={displayOddEven}/>
             <BingoBallCount ballCount={selectedBalls.length} showCountdown={showCountdown} />
-            <BingoCurrentBall currentBall={currentBall} dispatch={dispatch} selectedBalls={selectedBalls} />
+            <BingoLastBall currentBall={currentBall} dispatch={dispatch} selectedBalls={selectedBalls} />
         </section>
     );
 }
