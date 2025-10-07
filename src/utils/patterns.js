@@ -8,7 +8,7 @@ const patterns = [
         pattern: [ false, false, false, false, false, false, false, false, false, false, true, true, true, false, false, true, true, true, false, false, true, true, true, false, false],
     },
     {
-        label: '3. Letter T',
+        label: '3. Letter T any Direction',
         pattern: [false, false, false, false, true, false, false, false, false, true, true, true, true, true, true, false, false, false, false, true, false, false, false, false, true],
     },
     {
